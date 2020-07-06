@@ -12,6 +12,11 @@ app.use(cors());
 router.get("/api", (req, res) => {
   res.send(posts);
 });
+router.get("/api/:id", (req, res) => {
+  let id = req.params.id;
+  let post = posts.find((post) => post.id == id);
+  res.send(post);
+});
 
 app.listen(port, () => {
   console.log(`App is running on ${port}`);
