@@ -68,4 +68,13 @@ sudo apt update && sudo apt upgrade
 sudo certbot --nginx
 
 # Follow the certbot instructions. They are pretty straightforward.
+#Reload NGINX
+sudo systemctl reload nginx
+
+#Reload pm2 for 0-second downtime reload of the app after some minor changes
+
+pm2 reload react-express 
+
+##You are good to go!
+
 
