@@ -34,12 +34,12 @@ sudo vim react-express.conf
 server {
   server_name your_ip_or_domain;
   
-  # location block for react front end at the root
+ 
   location / {
     root /path/to/your/react/build ;
     $try_files $uri /index.html ;
   }
-  # location block for serving the api requests
+ 
   location ^~ /api {
   
   proxy_set_header X-Real-IP $remote_addr;
