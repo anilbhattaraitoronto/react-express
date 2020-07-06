@@ -37,7 +37,7 @@ server {
  
   location / {
     root /path/to/your/react/build ;
-    $try_files $uri /index.html ;
+    try_files $uri /index.html ;
   }
  
   location ^~ /api {
